@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {IndexComponent} from "../index/index.component";
+import {IndexComponent} from "../../shared/page/index/index.component";
+import {UserComponent} from "./user.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: UserComponent
   }
 ];
 

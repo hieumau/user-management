@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-landing-page',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageComponent implements OnInit {
   isBrand: boolean = true;
 
-  constructor() { }
+  constructor(private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
+  navigate(login: string) {
+    this.router.navigate(['/login'], {relativeTo: this.route})
+  }
 }

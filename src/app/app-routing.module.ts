@@ -1,8 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from "./app.component";
-import {IndexComponent} from "./features/index/index.component";
-import {LandingPageComponent} from "./features/landing-page/landing-page.component";
+import {LoginComponent} from "./shared/page/authen/login/login.component";
+import {RegisterComponent} from "./shared/page/authen/register/register.component";
+import {IndexComponent} from "./shared/page/index/index.component";
+import {LandingPageComponent} from "./shared/page/landing-page/landing-page.component";
 
 const routes: Routes = [
   // {
@@ -10,12 +12,20 @@ const routes: Routes = [
   //   loadChildren: () => import('./features/user/user.module').then(m => m.UserModule)
   // },
   {
-    path: '**',
-    redirectTo: 'landing'
-  },
-  {
     path: 'landing',
     component: LandingPageComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'landing'
   }
 ];
 
