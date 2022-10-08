@@ -1,0 +1,45 @@
+.nav-bar-container {
+  width: 100vw;
+  height: 60px;
+  background: var(--background);
+  position: fixed;
+  //display: flex;
+  .content {
+    height: 100%;
+    width: 100%;
+    //display: flex;
+    position: relative;
+    align-items: center;
+    .logo {
+      padding-inline: 2rem;
+      //position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-0%, -50%);
+    }
+
+    .menu-list {
+      //position: absolute;
+      //top: 50%;
+      //right: 0;
+      //transform: translate(-0%, -50%);
+      //display: flex;
+      //align-items: center;
+      .item {
+        font-weight: 500;
+        padding-inline: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.user-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-spacer {
+  width: 100vh;
+  height: 60px;
+}

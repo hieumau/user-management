@@ -7,6 +7,7 @@ import { GroupManagementComponent } from './page/group-management/group-manageme
 import { FundRaisingManagementComponent } from './page/fund-raising-management/fund-raising-management.component';
 import { WalletManagementComponent } from './page/wallet-management/wallet-management.component';
 import { UserInfoComponent } from './page/user-info/user-info.component';
+import { HomeComponent } from './page/home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserInfoComponent } from './page/user-info/user-info.component';
     GroupManagementComponent,
     FundRaisingManagementComponent,
     WalletManagementComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

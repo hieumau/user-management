@@ -7,10 +7,10 @@ import {IndexComponent} from "./shared/page/index/index.component";
 import {LandingPageComponent} from "./shared/page/landing-page/landing-page.component";
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./features/user/user.module').then(m => m.UserModule)
-  // },
+  {
+    path: '',
+    loadChildren: () => import('./features/user/user.module').then(m => m.UserModule)
+  },
   {
     path: 'landing',
     component: LandingPageComponent
