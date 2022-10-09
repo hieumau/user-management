@@ -15,4 +15,24 @@ mat-card-actions {
   justify-content: center;
 }
 
+// page have table
+.page-container {
+  .page-action {
+    display: flex;
+    justify-content: right;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+  .page-content {
+    padding: 0 1rem;
+  }
+}
 
+// table
+
+.table-container {
+  padding: 1rem;
+  table {
+    width: 100%;
+  }
+}
