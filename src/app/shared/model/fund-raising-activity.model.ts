@@ -1,5 +1,9 @@
+import {Group} from "./group.model";
+import {User} from "./user.model";
+
 export class FundRaisingActivity {
   id?: number
+  code?: string
   name?: string
   fundraiserName?: string
   description?: string
@@ -8,4 +12,6 @@ export class FundRaisingActivity {
   targetedEventDate?: Date
   isActive?: boolean
   isPublic?: boolean
+  group?: Group
+  beneficiary?: string
 }
