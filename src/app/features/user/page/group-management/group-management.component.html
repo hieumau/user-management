@@ -1,7 +1,7 @@
 <div class="page-container">
   <div class="page-action">
-    <button mat-button mat-flat-button color="primary">JOIN WITH CODE</button>
-    <button class="ml-4" mat-button mat-flat-button color="primary">CREATE NEW</button>
+    <button mat-button mat-flat-button color="primary" (click)="openJoinGroupDialog()">JOIN WITH CODE</button>
+    <button class="ml-4" mat-button mat-flat-button color="primary" (click)="openCreateDialog()">CREATE NEW</button>
   </div>
   <div class="page-content">
     <mat-tab-group>
