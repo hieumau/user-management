@@ -41,6 +41,7 @@ import { SideNavComponent } from './component/side-nav/side-nav.component';
 import { ActivityDetailsComponent } from './page/fund-raising-management/activity-details/activity-details.component';
 import { FundRaisingCardComponent } from './component/fund-raising-card/fund-raising-card.component';
 import { FundRaisingIndicatorBarComponent } from './component/fund-raising-indicator-bar/fund-raising-indicator-bar.component';
+import { DonorItemComponent } from './component/donor-item/donor-item.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { FundRaisingIndicatorBarComponent } from './component/fund-raising-indic
     SideNavComponent,
     ActivityDetailsComponent,
     FundRaisingCardComponent,
-    FundRaisingIndicatorBarComponent
+    FundRaisingIndicatorBarComponent,
+    DonorItemComponent
   ],
   imports: [
     CommonModule,

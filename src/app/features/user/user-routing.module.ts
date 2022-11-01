@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {IndexComponent} from "../../shared/page/index/index.component";
+import {ActivityDetailsComponent} from "./page/fund-raising-management/activity-details/activity-details.component";
 import {FundRaisingManagementComponent} from "./page/fund-raising-management/fund-raising-management.component";
 import {GroupManagementComponent} from "./page/group-management/group-management.component";
 import {HomeComponent} from "./page/home/home.component";
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'wallet',
         component: WalletManagementComponent
+      },
+      {
+        path: 'activity-details',
+        component: ActivityDetailsComponent
       },
     ]
   }

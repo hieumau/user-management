@@ -8,6 +8,9 @@
 .avatar.small {
   height: 35px;
 }
+.avatar.border {
+  border: 2px solid var(--primaryColor);
+}
 
 // card
 mat-card-actions {
