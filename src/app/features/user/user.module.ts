@@ -9,12 +9,15 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatGridListModule} from "@angular/material/grid-list";
 import {MatInputModule} from "@angular/material/input";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {BrowserModule} from "@angular/platform-browser";
+import {SharedModule} from "../../shared/shared.module";
 
 import {UserRoutingModule} from './user-routing.module';
 import {UserComponent} from './user.component';
@@ -35,6 +38,9 @@ import {
   CreateActivityDialogComponent
 } from './page/fund-raising-management/create-activity-dialog/create-activity-dialog.component';
 import { SideNavComponent } from './component/side-nav/side-nav.component';
+import { ActivityDetailsComponent } from './page/fund-raising-management/activity-details/activity-details.component';
+import { FundRaisingCardComponent } from './component/fund-raising-card/fund-raising-card.component';
+import { FundRaisingIndicatorBarComponent } from './component/fund-raising-indicator-bar/fund-raising-indicator-bar.component';
 
 
 @NgModule({
@@ -50,7 +56,10 @@ import { SideNavComponent } from './component/side-nav/side-nav.component';
     JoinGroupDialogComponent,
     JoinGroupSuccessfulDialogComponent,
     CreateActivityDialogComponent,
-    SideNavComponent
+    SideNavComponent,
+    ActivityDetailsComponent,
+    FundRaisingCardComponent,
+    FundRaisingIndicatorBarComponent
   ],
   imports: [
     CommonModule,
@@ -69,7 +78,10 @@ import { SideNavComponent } from './component/side-nav/side-nav.component';
     MatSlideToggleModule,
     FormsModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
+    MatProgressBarModule,
+    SharedModule
   ],
   providers: []
 })

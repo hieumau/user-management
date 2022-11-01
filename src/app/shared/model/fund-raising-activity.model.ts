@@ -14,4 +14,6 @@ export class FundRaisingActivity {
   isPublic?: boolean
   group?: Group
   beneficiary?: string
+  createdAt?: Date
+  currentAmount?: number
 }
