@@ -4,6 +4,16 @@
   font-size: 1.2rem;
 }
 
+.fund-raising-list-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.fund-raising-list {
+  min-width: 500px;
+  width: 1000px;
+}
 /*!
 * Created by Kroplet (https://www.kroplet.com)
 * The easiest way to create Bootstrap 4 themes.

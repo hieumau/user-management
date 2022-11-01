@@ -37,11 +37,11 @@ import {
 import {
   CreateActivityDialogComponent
 } from './page/fund-raising-management/create-activity-dialog/create-activity-dialog.component';
-import { SideNavComponent } from './component/side-nav/side-nav.component';
+import { SideNavComponent } from '../../shared/component/side-nav/side-nav.component';
 import { ActivityDetailsComponent } from './page/fund-raising-management/activity-details/activity-details.component';
-import { FundRaisingCardComponent } from './component/fund-raising-card/fund-raising-card.component';
-import { FundRaisingIndicatorBarComponent } from './component/fund-raising-indicator-bar/fund-raising-indicator-bar.component';
-import { DonorItemComponent } from './component/donor-item/donor-item.component';
+import { FundRaisingCardComponent } from '../../shared/component/fund-raising-card/fund-raising-card.component';
+import { FundRaisingIndicatorBarComponent } from '../../shared/component/fund-raising-indicator-bar/fund-raising-indicator-bar.component';
+import { DonorItemComponent } from '../../shared/component/donor-item/donor-item.component';
 
 
 @NgModule({
@@ -57,11 +57,7 @@ import { DonorItemComponent } from './component/donor-item/donor-item.component'
     JoinGroupDialogComponent,
     JoinGroupSuccessfulDialogComponent,
     CreateActivityDialogComponent,
-    SideNavComponent,
     ActivityDetailsComponent,
-    FundRaisingCardComponent,
-    FundRaisingIndicatorBarComponent,
-    DonorItemComponent
   ],
   imports: [
     CommonModule,
