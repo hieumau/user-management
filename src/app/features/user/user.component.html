@@ -19,11 +19,21 @@
       </div>
 
     </div>
-    <div class="user-name-container px-4">
+    <div class="user-name-container px-4" (click)="drawer.toggle()">
       <div><img class="avatar small" src="assets/images/default-avatar.jpg"></div>
       <div class="pl-2">Username</div>
     </div>
   </div>
 </div>
 <div class="nav-bar-spacer"></div>
-<router-outlet></router-outlet>
+
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="sidenav-container" position="end" mode="side">
+    <app-side-nav></app-side-nav>
+  </mat-drawer>
+
+  <div class="sidenav-content-container">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>

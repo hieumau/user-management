@@ -1,6 +1,6 @@
 .nav-bar-container {
   width: 100vw;
-  height: 60px;
+  height: var(--navbar-height);
   background: var(--background);
   position: fixed;
   //display: flex;
@@ -43,3 +43,23 @@
   width: 100vw;
   height: 60px;
 }
+
+
+.drawer-container {
+  //width: 500px;
+  //height: 300px;
+  //border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidenav-content-container {
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - var(--navbar-height));
+  //align-items: center;
+  //justify-content: center;
+}
+
+.sidenav-container {
+  //padding: 20px;
+}
+

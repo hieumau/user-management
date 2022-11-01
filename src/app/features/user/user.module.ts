@@ -4,11 +4,13 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
@@ -32,6 +34,7 @@ import {
 import {
   CreateActivityDialogComponent
 } from './page/fund-raising-management/create-activity-dialog/create-activity-dialog.component';
+import { SideNavComponent } from './component/side-nav/side-nav.component';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import {
     CreateGroupSuccessDialogComponent,
     JoinGroupDialogComponent,
     JoinGroupSuccessfulDialogComponent,
-    CreateActivityDialogComponent
+    CreateActivityDialogComponent,
+    SideNavComponent
   ],
   imports: [
     CommonModule,
@@ -63,7 +67,9 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: []
 })
