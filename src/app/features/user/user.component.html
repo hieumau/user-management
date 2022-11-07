@@ -1,38 +1,96 @@
-<div class="nav-bar-container">
-  <div class="content flex">
-    <div class="logo" style="font-weight: bold; font-size: 2rem">
-      LOGO
-    </div>
-    <div class="flex-grow-1"></div>
-    <div class="menu-list flex flex-wrap">
-      <div class="item" routerLink="/home" >
-        Home
-      </div>
-      <div class="item" routerLink="/groups">
-        Group
-      </div>
-      <div class="item" routerLink="/funds">
-        Fund Raising Activity
-      </div>
-      <div class="item" routerLink="/wallet">
-        Wallet
-      </div>
-    </div>
-    <div class="user-name-container px-4" (click)="drawer.toggle()">
-      <div><img class="avatar small" src="assets/images/default-avatar.jpg"></div>
-      <div class="pl-2">Username</div>
-    </div>
-  </div>
+<!--<div class="nav-bar-container">-->
+<!--  <div class="content flex">-->
+<!--    <div class="logo" style="font-weight: bold; font-size: 2rem">-->
+<!--      LOGO-->
+<!--    </div>-->
+<!--    <div class="flex-grow-1"></div>-->
+<!--    <div class="menu-list flex flex-wrap">-->
+<!--      <div class="item" routerLink="/home" >-->
+<!--        Home-->
+<!--      </div>-->
+<!--      <div class="item" routerLink="/groups">-->
+<!--        Group-->
+<!--      </div>-->
+<!--      <div class="item" routerLink="/funds">-->
+<!--        Fund Raising Activity-->
+<!--      </div>-->
+<!--      <div class="item" routerLink="/wallet">-->
+<!--        Wallet-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="user-name-container px-4" (click)="drawer.toggle()">-->
+<!--      <div><img class="avatar small" src="assets/images/default-avatar.jpg"></div>-->
+<!--      <div class="pl-2">Username</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="nav-bar-spacer"></div>-->
+
+<!--<mat-drawer-container class="drawer-container" autosize>-->
+<!--  <mat-drawer #drawer class="sidenav-container" position="start" mode="side">-->
+<!--    <app-side-nav></app-side-nav>-->
+<!--  </mat-drawer>-->
+
+<!--  <div class="sidenav-content-container">-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+
+<!--</mat-drawer-container>-->
+
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Crown Fund App</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <span *ngFor="let item of menu">
+          <span *ngIf="item.children && item.children.length > 0">
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <!-- Cabeceras del submenu -->
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                      <mat-icon>{{item.iconName}}</mat-icon>
+                      {{item.displayName}}
+                    </div>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <span *ngFor="let child of item.children">
+                  <mat-list-item routerLink="[child.route]">
+                    <!-- Entradas de cada submenú  -->
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                      <mat-icon>{{child.iconName}}</mat-icon>
+                      {{child.displayName}}
+                    </div>
+                  </mat-list-item>
+                </span>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </span>
+          <span *ngIf="!item.children || item.children.length === 0">
+            <mat-list-item routerLink="[item.route]">
+              <!-- Entradas principales -->
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-icon>{{item.iconName}}</mat-icon>
+                {{item.displayName}}
+              </div>
+            </mat-list-item>
+          </span>
+        </span>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
-<div class="nav-bar-spacer"></div>
-
-<mat-drawer-container class="drawer-container" autosize>
-  <mat-drawer #drawer class="sidenav-container" position="start" mode="side">
-    <app-side-nav></app-side-nav>
-  </mat-drawer>
-
-  <div class="sidenav-content-container">
-    <router-outlet></router-outlet>
-  </div>
-
-</mat-drawer-container>
