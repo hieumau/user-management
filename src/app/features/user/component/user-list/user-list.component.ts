@@ -1,7 +1,7 @@
 import {resolve} from "@angular/compiler-cli";
 import {error} from "@angular/compiler-cli/src/transformers/util";
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from "@angular/material/paginator";
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator, PageEvent} from "@angular/material/paginator";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatTableDataSource} from "@angular/material/table";
 import {PageData} from "../../../../shared/model/page-data";
@@ -13,7 +13,7 @@ import {UserService} from "../../../../shared/service/user.service";
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent implements OnInit, AfterViewInit  {
 
   constructor(
     private userService: UserService,
@@ -27,19 +27,28 @@ export class UserListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit(): void {
-    this.userService.getListUser(10, 1).then((result) => {
+
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource = new MatTableDataSource<User>([])
+    this.getUserList()
+  }
+
+  getUserList(size: number = 5, page: number = 0) {
+    this.userService.getListUser(size, page + 1).then((result) => {
       this.userPage = result
       if (this.userPage.data) {
-        console.log(this.userPage)
-        this.dataSource = new MatTableDataSource<User>(this.userPage.data)
-        this.dataSource.paginator = this.paginator;
-
+        this.dataSource.data = this.userPage.data
       }
-
     })
       .catch(error => {
         this.snackBar.open(error, 'Close', {duration: 4000})
       })
   }
 
+  changePage($event: PageEvent) {
+    console.log($event)
+    this.getUserList($event.pageSize, $event.pageIndex)
+  }
 }

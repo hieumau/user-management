@@ -15,11 +15,11 @@ export class UserService {
 
   baseUrl: string = environment.apiUrl + 'users'
 
-  getListUser(perPage: number, page: number): Promise<PageData<User>> {
+  getListUser(size: number, page: number): Promise<PageData<User>> {
     return new Promise((resolve, reject) => {
       let params = new HttpParams()
       params = params.set('page', page)
-      params = params.set('per_page', perPage)
+      params = params.set('per_page', size)
       this.apiService.get(this.baseUrl, null, params).subscribe((value: any) => {
           resolve(value)
         },
