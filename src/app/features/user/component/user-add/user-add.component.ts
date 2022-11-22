@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validator, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../../../shared/model/user.model";
 import {UserService} from "../../../../shared/service/user.service";
 
@@ -11,12 +12,19 @@ import {UserService} from "../../../../shared/service/user.service";
 })
 export class UserAddComponent implements OnInit {
 
+  urlName: string | null
+
   constructor(
     private snackBar: MatSnackBar,
     private userService: UserService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {
+    const routeParams = this.route.snapshot.paramMap;
+    this.urlName = routeParams.get('name');
   }
 
+  currentName: string
   jobs: any[] = ['A', 'B', 'C', 'D']
 
   userForm = new FormGroup({
@@ -25,6 +33,11 @@ export class UserAddComponent implements OnInit {
   })
 
   ngOnInit(): void {
+    if (this.urlName) {
+      this.userForm.get('name')?.setValue(this.urlName)
+      this.userForm.get('name')?.disable()
+
+    }
   }
 
   onAdd() {

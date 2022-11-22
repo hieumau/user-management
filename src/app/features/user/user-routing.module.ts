@@ -18,6 +18,10 @@ const routes: Routes = [
         component: UserAddComponent
       },
       {
+        path: 'users/:name',
+        component: UserAddComponent
+      },
+      {
         path: '**',
         redirectTo: 'list'
       },
