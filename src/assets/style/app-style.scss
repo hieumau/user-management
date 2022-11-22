@@ -58,8 +58,34 @@ mat-card-actions {
 }
 
 .date_container {
-  float: left;
-  display: flex !important;
-  align-items: center;
+  //display: flex !important;
+  position: relative;
+  .toggle {
+    position: absolute;
+    margin-top: 12px;
+    right: 0;
+  }
+  white-space: nowrap;
+}
+
+.field {
+  width: 100%;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.form-container {
+  width: 350px;
+  max-width: 350px;
+}
+
+.field-container {
+
+}
+
+.page-content {
+  display: flex;
   justify-content: center;
 }

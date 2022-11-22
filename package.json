@@ -23,9 +23,7 @@
     "primeflex": "^3.2.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "moment": "^2.29.1",
-    "@angular/material-moment-adapter": "^14.0.0"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.0",

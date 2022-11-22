@@ -1,32 +1,45 @@
 <div class="page-container">
   <div class="page-header">Create User</div>
   <div class="page-content">
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Placeholder">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Job</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let job of jobs" [value]="job">
-            {{job}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Choose a joined date</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <app-max-date-range-selector *ngIf="dateRange.dates"
-                                   label="Select duration"
-                                   (onDateRangeChange)="onDateRangeChange($event)"
-                                   [maxRange]="99999999999"
-                                   [buttonIcon]="'date_range'"
-                                   [default]="dateRange"
-      ></app-max-date-range-selector>
+    <div class="form-container">
+      <div class="field-container">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+      <div class="field-container">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Job</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let job of jobs" [value]="job">
+              {{job}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="date_container field-container">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Choose a joined date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-datepicker-toggle class="toggle" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      </div>
+
+      <div class="date_container field-container">
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Chose a date range</mat-label>
+          <mat-date-range-input [rangePicker]="rangePicker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-date-range-picker #rangePicker></mat-date-range-picker>
+        </mat-form-field>
+        <mat-datepicker-toggle class="toggle" matIconSuffix [for]="rangePicker"></mat-datepicker-toggle>
+      </div>
+
     </div>
   </div>
 

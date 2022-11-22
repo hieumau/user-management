@@ -1,7 +1,6 @@
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {MomentDateAdapter} from "@angular/material-moment-adapter";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {DateAdapter, MAT_DATE_LOCALE} from "@angular/material/core";

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import moment from "moment";
 
 @Component({
   selector: 'app-user-add',
@@ -12,19 +11,9 @@ export class UserAddComponent implements OnInit {
 
   jobs: any[] = ['A', 'B', 'C', 'D']
 
-  dateRange = {
-    dates: {
-      start: moment().add(0, 'day'),
-      end: moment().add(0, 'day'),
-    },
-    type: 'init'
-  };
 
   ngOnInit(): void {
   }
 
-  onDateRangeChange(event: any) {
-    this.dateRange = event;
-  }
 
 }
