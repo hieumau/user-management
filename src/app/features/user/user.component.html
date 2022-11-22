@@ -1,49 +1,15 @@
-<!--<div class="nav-bar-container">-->
-<!--  <div class="content flex">-->
-<!--    <div class="logo" style="font-weight: bold; font-size: 2rem">-->
-<!--      LOGO-->
-<!--    </div>-->
-<!--    <div class="flex-grow-1"></div>-->
-<!--    <div class="menu-list flex flex-wrap">-->
-<!--      <div class="item" routerLink="/home" >-->
-<!--        Home-->
-<!--      </div>-->
-<!--      <div class="item" routerLink="/groups">-->
-<!--        Group-->
-<!--      </div>-->
-<!--      <div class="item" routerLink="/funds">-->
-<!--        Fund Raising Activity-->
-<!--      </div>-->
-<!--      <div class="item" routerLink="/wallet">-->
-<!--        Wallet-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="user-name-container px-4" (click)="drawer.toggle()">-->
-<!--      <div><img class="avatar small" src="assets/images/default-avatar.jpg"></div>-->
-<!--      <div class="pl-2">Username</div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<div class="nav-bar-spacer"></div>-->
-
-<!--<mat-drawer-container class="drawer-container" autosize>-->
-<!--  <mat-drawer #drawer class="sidenav-container" position="start" mode="side">-->
-<!--    <app-side-nav></app-side-nav>-->
-<!--  </mat-drawer>-->
-
-<!--  <div class="sidenav-content-container">-->
-<!--    <router-outlet></router-outlet>-->
-<!--  </div>-->
-
-<!--</mat-drawer-container>-->
-
 
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">User Management App</h1>
+    <h1 class="example-app-name"></h1>
+    <div style="display: flex; width: 100%"></div>
+    <div class="logout-container" routerLink="/login">
+      Logout
+      <mat-icon style="padding-top: 2px; margin-left: 5px">exit_to_app</mat-icon>
+    </div>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container"

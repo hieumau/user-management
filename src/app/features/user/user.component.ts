@@ -21,11 +21,6 @@ export class UserComponent implements OnInit {
       iconName: 'add_circle',
       route: '/user/add'
     },
-    {
-      displayName: 'Logout',
-      iconName: 'exit_to_app',
-      route: '/logout'
-    }
   ];
   mobileQuery: MediaQueryList;
 
