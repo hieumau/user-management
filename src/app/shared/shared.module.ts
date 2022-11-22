@@ -8,6 +8,10 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatInputModule} from "@angular/material/input";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {RouterLink} from "@angular/router";
+import {
+  MaxDateRangeSelectorComponent,
+  MaxRangeDirective
+} from "./component/date-range-selector/date-range-selector.component";
 import {LoginComponent} from "./page/authen/login/login.component";
 import {RegisterComponent} from "./page/authen/register/register.component";
 import {IndexComponent} from "./page/index/index.component";
@@ -20,6 +24,9 @@ import {MaterialElevationDirective} from './directive/material-elevation.directi
     RegisterComponent,
     IndexComponent,
     MaterialElevationDirective,
+    MaxRangeDirective,
+    MaxDateRangeSelectorComponent,
+
   ],
   exports: [
     LoginComponent,

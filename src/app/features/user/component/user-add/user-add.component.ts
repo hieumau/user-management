@@ -9,6 +9,8 @@ export class UserAddComponent implements OnInit {
 
   constructor() { }
 
+  jobs: any[] = ['A', 'B', 'C', 'D']
+
   ngOnInit(): void {
   }
 

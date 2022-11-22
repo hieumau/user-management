@@ -1,1 +1,29 @@
-<p>user-add works!</p>
+<div class="page-container">
+  <div class="page-header">Create User</div>
+  <div class="page-content">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Job</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let job of jobs" [value]="job">
+            {{job}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a joined date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,23 @@
+mat-form-field.icon-only {
+  width: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+  padding-bottom: 0;
+  font-size: 16px;
+  display: none;
+}
+
+mat-datepicker-toggle.icon-only {
+  color: white;
+  display: none;
+}
+
+mat-date-range-input.icon-only {
+  display: none;
+}
+
+mat-label.icon-only {
+  display: none;
+}/*# sourceMappingURL=date-range-selector.component.css.map */
