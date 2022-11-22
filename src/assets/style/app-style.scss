@@ -20,6 +20,13 @@ mat-card-actions {
 
 // page have table
 .page-container {
+  .page-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .page-action {
     display: flex;
     justify-content: right;

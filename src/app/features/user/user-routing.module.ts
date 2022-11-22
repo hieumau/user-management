@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {UserAddComponent} from "./component/user-add/user-add.component";
 import {UserListComponent} from "./component/user-list/user-list.component";
 import {UserComponent} from "./user.component";
 
@@ -9,12 +10,16 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       {
-        path: '**',
-        redirectTo: 'user-list'
+        path: 'list',
+        component: UserListComponent
       },
       {
-        path: 'user-list',
-        component: UserListComponent
+        path: 'add',
+        component: UserAddComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'list'
       },
     ]
   }

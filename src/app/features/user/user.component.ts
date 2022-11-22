@@ -12,57 +12,19 @@ export class UserComponent implements OnInit {
 
   menu: NavItem [] = [
     {
-      displayName: 'UserName',
+      displayName: 'User Management',
       iconName: 'account_circle',
-      children: [
-        {
-          displayName: 'Profile',
-          iconName: 'info',
-          route: 'user-profile'
-        },
-      ]
+      route: '/user/list'
     },
     {
-      displayName: 'Dashboard',
-      iconName: 'dashboard',
-      route: 'dashboard'
-    },
-    {
-      displayName: 'Fund Raising Activity',
-      iconName: 'local_activity',
-      children: [
-        {
-          displayName: 'Public Activity',
-          iconName: 'public',
-          route: '/fund-activity/public'
-        },
-        {
-          displayName: 'Private Activity',
-          iconName: 'lock',
-          route: '/fund-activity/private'
-        },
-      ]
-    },
-    {
-      displayName: 'Group',
-      iconName: 'group',
-      children: [
-        {
-          displayName: 'Owned Group',
-          iconName: 'gavel',
-          route: '/group/owned'
-        },
-        {
-          displayName: 'Joined Group',
-          iconName: 'group_work',
-          route: '/group/joined'
-        },
-      ]
+      displayName: 'Add User',
+      iconName: 'account_circle',
+      route: '/user/add'
     },
     {
       displayName: 'Logout',
       iconName: 'exit_to_app',
-      route: 'logout'
+      route: '/logout'
     }
   ];
   mobileQuery: MediaQueryList;

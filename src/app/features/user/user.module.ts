@@ -26,12 +26,14 @@ import {SharedModule} from "../../shared/shared.module";
 import {UserRoutingModule} from './user-routing.module';
 import {UserComponent} from './user.component';
 import { UserListComponent } from './component/user-list/user-list.component';
+import { UserAddComponent } from './component/user-add/user-add.component';
 
 
 @NgModule({
   declarations: [
     UserComponent,
     UserListComponent,
+    UserAddComponent,
   ],
   imports: [
     CommonModule,
