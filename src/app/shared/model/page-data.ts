@@ -3,6 +3,6 @@ export class PageData<T> {
   per_page?: number
   total?: number
   total_page?: number
-  data?: T[]
+  data: T[] = []
 
 }

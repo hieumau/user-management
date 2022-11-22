@@ -19,7 +19,7 @@
     "target": "es2020",
     "module": "es2020",
     "strictPropertyInitialization": false,
-
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "es2020",
       "dom"
@@ -29,6 +29,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
+    "strictTemplates": true
   }
 }

@@ -4,10 +4,13 @@
 
 .avatar {
   border-radius: 9999999px;
+  height: 60px;
+
 }
 .avatar.small {
   height: 35px;
 }
+
 .avatar.border {
   border: 2px solid var(--primaryColor);
 }
@@ -52,3 +55,4 @@ mat-card-actions {
 .mat-drawer-container {
   background-color: transparent;
 }
+

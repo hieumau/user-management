@@ -11,7 +11,7 @@ export class ApiService {
   }
 
 
-  public get<T>(url: string, item?: string, params?: HttpParams): Observable<T> {
+  public get<T>(url: string, item?: string | null, params?: HttpParams): Observable<T> {
     if (item) {
       url += `/${item}`;
     }
