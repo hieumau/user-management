@@ -20,11 +20,6 @@ export class UserComponent implements OnInit {
           iconName: 'info',
           route: 'user-profile'
         },
-        {
-          displayName: 'Logout',
-          iconName: 'exit_to_app',
-          route: 'logout'
-        }
       ]
     },
     {
@@ -46,11 +41,6 @@ export class UserComponent implements OnInit {
           iconName: 'lock',
           route: '/fund-activity/private'
         },
-        {
-          displayName: 'Create Activity',
-          iconName: 'create',
-          route: '/fund-activity/create'
-        },
       ]
     },
     {
@@ -67,17 +57,18 @@ export class UserComponent implements OnInit {
           iconName: 'group_work',
           route: '/group/joined'
         },
-        {
-          displayName: 'Create Group',
-          iconName: 'create',
-          route: '/group/create'
-        }
       ]
+    },
+    {
+      displayName: 'Logout',
+      iconName: 'exit_to_app',
+      route: 'logout'
     }
   ];
   mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;
+  sideNavOpen: boolean = true;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');

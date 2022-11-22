@@ -10,6 +10,14 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  min-width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .card.login-card {
+    width: calc(100% - 50px);
+    min-width: 100px;
+  }
 }
 
 .register-link {

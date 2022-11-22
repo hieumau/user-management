@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ActivityDetailsComponent} from "./page/fund-raising-management/activity-details/activity-details.component";
-import {FundRaisingManagementComponent} from "./page/fund-raising-management/fund-raising-management.component";
-import {GroupManagementComponent} from "./page/group-management/group-management.component";
-import {HomeComponent} from "./page/home/home.component";
-import {WalletManagementComponent} from "./page/wallet-management/wallet-management.component";
+import {UserListComponent} from "./component/user-list/user-list.component";
 import {UserComponent} from "./user.component";
 
 const routes: Routes = [
@@ -13,28 +9,12 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       {
-        path: '',
-        component: HomeComponent
+        path: '**',
+        redirectTo: 'user-list'
       },
       {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: 'groups',
-        component: GroupManagementComponent
-      },
-      {
-        path: 'funds',
-        component: FundRaisingManagementComponent
-      },
-      {
-        path: 'wallet',
-        component: WalletManagementComponent
-      },
-      {
-        path: 'activity-details',
-        component: ActivityDetailsComponent
+        path: 'user-list',
+        component: UserListComponent
       },
     ]
   }

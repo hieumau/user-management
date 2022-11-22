@@ -106,3 +106,13 @@ table {
 .mat-expansion-panel-header {
   padding: 0 16px;
 }
+
+.nav-item-container {
+  display: flex;
+  .item-icon-container {
+    margin-right: 10px;
+  }
+  .item-display-name {
+    padding-top: 4px;
+  }
+}

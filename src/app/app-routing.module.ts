@@ -4,16 +4,11 @@ import {AppComponent} from "./app.component";
 import {LoginComponent} from "./shared/page/authen/login/login.component";
 import {RegisterComponent} from "./shared/page/authen/register/register.component";
 import {IndexComponent} from "./shared/page/index/index.component";
-import {LandingPageComponent} from "./shared/page/landing-page/landing-page.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'user',
     loadChildren: () => import('./features/user/user.module').then(m => m.UserModule)
-  },
-  {
-    path: 'landing',
-    component: LandingPageComponent
   },
   {
     path: 'login',
@@ -25,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'landing'
+    redirectTo: 'login'
   }
 ];
 
