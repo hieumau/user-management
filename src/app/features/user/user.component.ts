@@ -1,5 +1,6 @@
 import {MediaMatcher} from "@angular/cdk/layout";
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {MatSidenav} from "@angular/material/sidenav";
 import {NavItem} from "../../shared/model/nav-item";
 
 @Component({
@@ -9,6 +10,7 @@ import {NavItem} from "../../shared/model/nav-item";
 })
 export class UserComponent implements OnInit {
 
+  @ViewChild('snav') snav : MatSidenav
 
   menu: NavItem [] = [
     {
@@ -25,7 +27,7 @@ export class UserComponent implements OnInit {
   mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;
-  sideNavOpen: boolean = true;
+  sideNavOpen: boolean = false;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
@@ -38,7 +40,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
+
 
 }

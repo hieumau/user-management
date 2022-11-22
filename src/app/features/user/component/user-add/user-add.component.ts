@@ -36,7 +36,6 @@ export class UserAddComponent implements OnInit {
     if (this.urlName) {
       this.userForm.get('name')?.setValue(this.urlName)
       this.userForm.get('name')?.disable()
-
     }
   }
 
