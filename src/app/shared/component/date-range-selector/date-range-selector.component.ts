@@ -189,6 +189,9 @@ abstract class AbstractDateRangeSelectorComponent implements OnInit {
   ],
 })
 export class MaxDateRangeSelectorComponent extends AbstractDateRangeSelectorComponent {
+  @Input()
+  label: string
+
   constructor(
     private maxRangeSelectionStrategy: MaxRangeSelectionStrategy<Moment>
   ) {

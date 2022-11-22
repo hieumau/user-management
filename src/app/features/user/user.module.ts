@@ -23,6 +23,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {BrowserModule} from "@angular/platform-browser";
+import {MaxRangeSelectionStrategy} from "../../shared/component/date-range-selector/date-range-selector.component";
 import {SharedModule} from "../../shared/shared.module";
 
 import {UserRoutingModule} from './user-routing.module';
@@ -65,7 +66,9 @@ import { UserAddComponent } from './component/user-add/user-add.component';
     MatPaginatorModule,
     MatSelectModule
   ],
-  providers: []
+  providers: [
+    MaxRangeSelectionStrategy
+  ]
 })
 export class UserModule {
 }

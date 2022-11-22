@@ -1,8 +1,10 @@
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import {MomentDateAdapter} from "@angular/material-moment-adapter";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
+import {DateAdapter, MAT_DATE_LOCALE} from "@angular/material/core";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
@@ -34,6 +36,7 @@ import {SharedModule} from "./shared/shared.module";
      MatSnackBarModule
   ],
   providers: [
+
 
   ],
   bootstrap: [AppComponent]

@@ -20,7 +20,13 @@
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-
+      <app-max-date-range-selector *ngIf="dateRange.dates"
+                                   label="Select duration"
+                                   (onDateRangeChange)="onDateRangeChange($event)"
+                                   [maxRange]="99999999999"
+                                   [buttonIcon]="'date_range'"
+                                   [default]="dateRange"
+      ></app-max-date-range-selector>
     </div>
   </div>
 
