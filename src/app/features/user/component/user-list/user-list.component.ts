@@ -35,7 +35,7 @@ export class UserListComponent implements OnInit, AfterViewInit  {
     this.getUserList()
   }
 
-  getUserList(size: number = 5, page: number = 0) {
+  getUserList(size: number = 10, page: number = 0) {
     this.userService.getListUser(size, page + 1).then((result) => {
       this.userPage = result
       if (this.userPage.data) {

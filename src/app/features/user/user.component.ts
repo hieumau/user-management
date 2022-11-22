@@ -18,7 +18,7 @@ export class UserComponent implements OnInit {
     },
     {
       displayName: 'Add User',
-      iconName: 'account_circle',
+      iconName: 'add_circle',
       route: '/user/add'
     },
     {
