@@ -1,17 +1,17 @@
 <div class="page-container">
   <div class="page-header">Create User</div>
   <div class="page-content">
-    <div class="form-container">
+    <div class="form-container" [formGroup]="userForm">
       <div class="field-container">
-        <mat-form-field class="field" appearance="outline">
+        <mat-form-field  class="field" appearance="outline">
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input formControlName="name" matInput placeholder="Placeholder">
         </mat-form-field>
       </div>
       <div class="field-container">
         <mat-form-field class="field" appearance="outline">
           <mat-label>Job</mat-label>
-          <mat-select>
+          <mat-select formControlName="job">
             <mat-option *ngFor="let job of jobs" [value]="job">
               {{job}}
             </mat-option>
@@ -39,10 +39,11 @@
         </mat-form-field>
         <mat-datepicker-toggle class="toggle" matIconSuffix [for]="rangePicker"></mat-datepicker-toggle>
       </div>
-
+      <div style="display: flex; justify-content: center">
+        <button mat-button mat-stroked-button (click)="onAdd()" color="primary">ADD</button>
+      </div>
     </div>
   </div>
-
 </div>
 
 

@@ -4,4 +4,8 @@ export class User {
   first_name?: string
   last_name?: string
   avatar?: string
+
+  name?: string | null | undefined
+  job?: string | null | undefined
+  createdAt?: Date
 }

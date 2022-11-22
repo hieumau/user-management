@@ -29,4 +29,15 @@ export class UserService {
     })
   }
 
+  createUser(user: User): Promise<User> {
+    return new Promise((resolve, reject) => {
+      this.apiService.post(this.baseUrl, null).subscribe((value: any) => {
+          resolve(value)
+        },
+        error => {
+          reject(error)
+        })
+    })
+  }
+
 }
