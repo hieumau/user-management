@@ -14,15 +14,22 @@ export class UserComponent implements OnInit {
 
   menu: NavItem [] = [
     {
-      displayName: 'User Management',
+      displayName: 'User',
       iconName: 'account_circle',
-      route: '/user/list'
+      children: [
+        {
+          displayName: 'Manage',
+          iconName: 'table_chart',
+          route: '/user/list',
+        },
+        {
+          displayName: 'Add',
+          iconName: 'add_circle',
+          route: '/user/add'
+        },
+      ]
     },
-    {
-      displayName: 'Add User',
-      iconName: 'add_circle',
-      route: '/user/add'
-    },
+
   ];
   mobileQuery: MediaQueryList;
 
